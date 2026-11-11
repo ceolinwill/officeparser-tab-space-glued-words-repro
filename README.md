@@ -1,5 +1,7 @@
 # officeparser: words glued together when a PDF's space glyph maps to U+0009
 
+Reported upstream: https://github.com/harshankur/officeParser/issues/158
+
 Since officeparser 8.4.0, a PDF whose space glyph's `/ToUnicode` entry is U+0009 (tab) comes out with every word glued to the next ("Helloworldagain"), whenever pdf.js gives each word its own text item (here, because each space is in its own marked-content span, as tagged-PDF writers such as InDesign emit them). pdf.js still reads the spaces ("Hello" " " "world" " " "again"), and officeparser 8.3.0 and earlier output "Hello world again". The same PDF with the space mapped to U+0020 is read correctly.
 
 ## Reproduction
