@@ -1,0 +1,12 @@
+{
+  "name": "officeparser-tab-space-glued-words-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "repro": "node repro.mjs"
+  },
+  "dependencies": {
+    "officeparser": "8.7.1",
+    "pdfjs-dist": "6.2.108"
+  }
+}
